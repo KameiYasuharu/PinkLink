@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ログイン</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .login-container {
+            background-color: #fff; /* 背景色 */
+            padding: 30px; /* 内余白を増やす */
+            border-radius: 8px; /* 枠の角を丸くする */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 影の効果 */
+            width: 400px; /* フォームの幅を増やす */
+            box-sizing: border-box; /* paddingが幅に影響しないようにする */
+        }
+        .login-container h2 {
+            text-align: center; /* タイトルを中央に揃える */
+            margin-bottom: 20px; /* タイトルと入力フィールドの間隔 */
+        }
+        .form-group {
+            margin-bottom: 15px; /* 各入力フィールドグループの間隔 */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* コンテナの開始位置から揃える */
+        }
+        .form-group div {
+            display: flex; /* flexレイアウトを使用 */
+            align-items: center; /* 垂直中央揃え */
+            margin: 5px 0; /* 単選ボタン間の間隔 */
+            margin-left: 130px; /* コンテナ左側からの単選ボタンの間隔 */
+        }
+        .form-group input[type="radio"] {
+            margin-right: 5px; /* 単選ボタンとユーザー名の間隔 */
+        }
+        .button-container {
+            text-align: center; /* ボタンを中央揃え */
+        }
+        .login-container input[type="submit"] {
+            width: auto; /* ボタンの幅を自動に設定 */
+            padding: 15px 30px; /* ボタンの内余白 */
+            background-color: #28a745; /* ボタンの背景色 */
+            border: none; /* ボタンの枠線を非表示 */
+            border-radius: 4px; /* ボタンの角を丸くする */
+            color: #fff; /* ボタンの文字色 */
+            cursor: pointer; /* マウスオーバー時にカーソルをポインタに変更 */
+            display: inline-block; /* ボタンを行内ブロック表示 */
+        }
+        .login-container input[type="submit"]:hover {
+            background-color: #218838; /* ボタンをホバーしたときの背景色 */
+        }
+    </style>
+
+</head>
+<body>
+    <div class="login-container">
+        <h2>ログイン</h2>
+        <form id="loginForm" action="gis">
+            <div class="form-group">
+                <div>
+                    <input type="radio" name="user_code" value="X0071920" required checked>
+                    <label for="user1">X0071920</label>
+                </div>
+                <div>
+                    <input type="radio" name="user_code" value="KDKEJ150" required>
+                    <label for="user2">KDKEJ150</label>
+                </div>
+            </div>
+            <div class="button-container">
+                <button type="submit" class="loginButton">ログイン</button>
+            </div>
+        </form>
+    </div>
+	<script src="js/api.js"></script>
+</body>
+</html>

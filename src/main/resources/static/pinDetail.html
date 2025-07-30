@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>設計書詳細情報</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            padding: 8px 12px;
+        }
+        .label-cell {
+            min-width: 120px;
+            text-align: left;
+        }
+        .input-cell input {
+            width: 200px;
+            padding: 4px 8px;
+        }
+        .error-message {
+            color: red;
+            font-size: 1.1em;
+            display: none;
+            margin-top: 16px;
+        }
+        .detail-table {
+            display: table;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="popup-container">
+        <h1>設計書詳細情報</h1>
+
+        <div id="errorMsg" class="error-message">権限認証失敗</div>
+
+        <table id="detailTable" class="detail-table">
+            <tr>
+                <td class="label-cell">設計書番号</td>
+                <td class="input-cell"><input type="text" name="sekkeishoNo"></td>
+            </tr>
+            <tr>
+                <td class="label-cell">工事会社</td>
+                <td class="input-cell"><input type="text" name="koujiKaisha"></td>
+            </tr>
+            <tr>
+                <td class="label-cell">設計書ステータス</td>
+                <td class="input-cell"><input type="text" name="sekkeishoStatus"></td>
+            </tr>
+            <tr>
+                <td class="label-cell">金額</td>
+                <td class="input-cell"><input type="text" name="kingaku"></td>
+            </tr>
+        </table>
+    </div>
+    <script src="js/pinDetail.js"></script>
+</body>
+
+</html>

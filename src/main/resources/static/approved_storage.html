@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>認可格納完了画面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .login-container {
+            background-color: #fff;
+            /* 背景色 */
+            padding: 30px;
+            /* 内余白を増やす */
+            border-radius: 8px;
+            /* 枠の角を丸くする */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* 影の効果 */
+            width: 400px;
+            /* フォームの幅を増やす */
+            box-sizing: border-box;
+            /* paddingが幅に影響しないようにする */
+        }
+
+        .login-container h2 {
+            text-align: center;
+            /* タイトルを中央に揃える */
+            margin-bottom: 20px;
+            /* タイトルと入力フィールドの間隔 */
+        }
+
+        #dynamicUserMessage {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 15px;
+            font-family: Arial, sans-serif;
+        }
+
+        #dynamicUser {
+            font-weight: normal;
+            color: #333;
+            font-family: Arial, sans-serif;
+            font-size: 1rem;
+        }
+
+        .button-container {
+            text-align: center;
+            /* ボタンを中央揃え */
+        }
+
+        .message-group {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>認可格納完了</h2>
+        <form id="approvedForm">
+            <!-- 隠し入力フィールド -->
+            <input type="hidden" id="username" name="username">
+            <input type="hidden" id="password" name="password">
+
+            <div class="message-group">
+                <p id="dynamicUserMessage">
+                    <span id="dynamicUser"></span>の認可情報をDBに登録しました
+                </p>
+            </div>
+
+            <div class="button-container">
+                <input type="button" value="地図表示" onclick="showMap()">
+            </div>
+        </form>
+    </div>
+    <script src="js/approved_storage.js"></script>
+</body>
+
+</html>
