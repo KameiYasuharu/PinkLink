@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>ピンの詳細情報</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+	<div class="popup-container">
+		<h1>ピンの詳細情報 - <span th:text="${detail.sbNo}"></span></h1>
+
+		<table>
+			<tr>
+				<td>設備番号</td>
+				<td th:text="${detail.sbNo}"></td>
+			</tr>
+			<tr>
+				<td>緯度</td>
+				<td th:text="${detail.keido}"></td>
+			</tr>
+			<tr>
+				<td>経度</td>
+				<td th:text="${detail.ido}"></td>
+			</tr>
+			<tr>
+				<td>ダミー項目</td>
+				<td th:text="${detail.dummyItem}"></td>
+			</tr>
+			<tr>
+				<td>設計図有無</td>
+				<td>
+					<span th:text="${detail.designFlg == '1'} ? 'あり' : '無し'"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>写真有無</td>
+				<td>
+					<span th:text="${detail.photoFlg == '1'} ? 'あり' : '無し'"></span>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div th:if="${error}" class="error-message">
+		<p th:text="${error}">Error message will appear here</p>
+	</div>
+</body>
+
+</html>
